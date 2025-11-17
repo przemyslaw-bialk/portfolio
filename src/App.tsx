@@ -18,14 +18,6 @@ import Skills from "./assets/components/Skills/Skills";
 function App() {
   const projects = [
     {
-      title: "tapes-transfer",
-      description: "company site built with REACT",
-      tags: ["react", "styled-components", "commercial project"],
-      logo: <PiCassetteTapeLight />,
-      github: "https://github.com/Losssik/kasety",
-      live_version: "https://tapestransfer.com/",
-    },
-    {
       title: "clean-read",
       logo: <IoBookOutline />,
       tags: ["MERN", "full-stack", "react", "jwt"],
@@ -35,8 +27,17 @@ function App() {
     {
       title: "tiste",
       tags: ["react", "recharts", "local storage", "leaflet"],
+      github: "https://github.com/Losssik/Tiste-TS",
       logo: <GiBoatFishing />,
       live_version: "https://tiste.pl/",
+    },
+    {
+      title: "tapes-transfer",
+      description: "company site built with REACT",
+      tags: ["react", "styled-components", "commercial project"],
+      logo: <PiCassetteTapeLight />,
+      github: "https://github.com/Losssik/kasety",
+      live_version: "https://tapestransfer.com/",
     },
     {
       title: "osk-abas",
