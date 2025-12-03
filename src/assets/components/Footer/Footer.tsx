@@ -1,11 +1,11 @@
-type FooterProps = {
+type Year = {
   year: number;
 };
 
-const Footer = (props: FooterProps) => {
-  const year = props.year ?? new Date().getFullYear();
+const Footer = () => {
+  const current: Year = { year: new Date().getFullYear() };
 
-  return <p className="footer">© {year}. All rights reserved.</p>;
+  return <p className="footer">© {current.year}. All rights reserved.</p>;
 };
 
 export default Footer;

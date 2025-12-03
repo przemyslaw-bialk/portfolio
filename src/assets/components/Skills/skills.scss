@@ -6,8 +6,8 @@
     justify-content: space-between;
     align-items: stretch;
     border: 1px solid $color-text-secondary;
-    padding: 1rem;
-    margin: 2rem;
+    padding: 2rem;
+
     text-align: center;
 
     border-radius: $radius;
@@ -46,5 +46,17 @@
 @media (max-width: 900px) {
   .skills__list {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .skills__flex {
+    flex-direction: column;
+    padding: 1.4rem;
+  }
+}
+@media (max-width: 700px) {
+  .skills__mastered {
+    border-right: none;
   }
 }

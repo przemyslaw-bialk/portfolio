@@ -61,7 +61,7 @@ function App() {
   ];
 
   return (
-    <div className="$container-width">
+    <div style={{ padding: "10px" }}>
       <AboutMe />
       <Projects projects={projects} />
       <Description />
