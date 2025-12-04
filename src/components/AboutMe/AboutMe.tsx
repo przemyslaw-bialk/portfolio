@@ -1,4 +1,5 @@
-import cvFile from "../../files/cv.pdf";
+import cvFile from "../../assets/files/cv.pdf";
+
 import { motion } from "framer-motion";
 
 const AboutMe = () => {
@@ -43,7 +44,7 @@ const AboutMe = () => {
           My resume
         </a>
         <a
-          href="https://github.com/Losssik"
+          href="https://github.com/przemyslaw-bialk"
           target="_blank"
           rel="noopener noreferrer"
           className="about-me__link"

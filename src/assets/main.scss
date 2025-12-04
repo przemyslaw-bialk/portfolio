@@ -1,11 +1,13 @@
-@use "styles/base/variables" as *;
-@use "components/AboutMe/about-me";
-@use "components/ProjectCard/project-card.scss";
-@use "components/Projects/projects.scss";
-@use "components/Description/description.scss";
-@use "components/ContactForm/contact-form.scss";
-@use "components/Footer/footer.scss";
-@use "components/Skills/skills.scss";
+@use "./styles/base/variables" as *;
+
+// komponenty
+@use "../components/AboutMe/about-me.scss";
+@use "../components/ProjectCard/project-card.scss";
+@use "../components/Projects/projects.scss";
+@use "../components/Description/description.scss";
+@use "../components/ContactForm/contact-form.scss";
+@use "../components/Footer/footer.scss";
+@use "../components/Skills/skills.scss";
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap");
 

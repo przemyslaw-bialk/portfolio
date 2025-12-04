@@ -1,7 +1,10 @@
 import "./assets/main.scss";
-import AboutMe from "./assets/components/AboutMe/AboutMe";
-import Projects from "./assets/components/Projects/Projects";
-import Description from "./assets/components/Description/Description";
+import AboutMe from "./components/AboutMe/AboutMe";
+import Projects from "./components/Projects/Projects";
+import Description from "./components/Description/Description";
+import ContactForm from "./components/ContactForm/ContactForm";
+import Footer from "./components/Footer/Footer";
+import Skills from "./components/Skills/Skills";
 
 import { PiCassetteTapeLight } from "react-icons/pi";
 import {
@@ -11,9 +14,6 @@ import {
   IoBagCheckOutline,
 } from "react-icons/io5";
 import { GiBoatFishing } from "react-icons/gi";
-import ContactForm from "./assets/components/ContactForm/ContactForm";
-import Footer from "./assets/components/Footer/Footer";
-import Skills from "./assets/components/Skills/Skills";
 
 function App() {
   const projects = [
@@ -21,13 +21,13 @@ function App() {
       title: "clean-read",
       logo: <IoBookOutline />,
       tags: ["MERN", "full-stack", "react", "jwt"],
-      github: "https://github.com/Losssik/clean-read",
+      github: "https://github.com/przemyslaw-bialk/clean-read",
       live_version: "https://host559218.xce.pl/",
     },
     {
       title: "tiste",
-      tags: ["react", "recharts", "local storage", "leaflet"],
-      github: "https://github.com/Losssik/Tiste-TS",
+      tags: ["react", "scrapping", "recharts", "leaflet"],
+      github: "https://github.com/przemyslaw-bialk/Tiste-TS",
       logo: <GiBoatFishing />,
       live_version: "https://tiste.pl/",
     },
@@ -36,14 +36,14 @@ function App() {
       description: "company site built with REACT",
       tags: ["react", "styled-components", "commercial project"],
       logo: <PiCassetteTapeLight />,
-      github: "https://github.com/Losssik/kasety",
+      github: "https://github.com/przemyslaw-bialk/kasety",
       live_version: "https://tapestransfer.com/",
     },
     {
       title: "osk-abas",
       tags: ["react", "design", "commercial project"],
       logo: <IoCarSportOutline />,
-      github: "https://github.com/Losssik/abas",
+      github: "https://github.com/przemyslaw-bialk/abas",
       live_version: "https://osk-abas.pl/",
     },
     {
