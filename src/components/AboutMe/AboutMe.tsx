@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import cvFile from "../../assets/files/cv.pdf";
 
 import { motion } from "framer-motion";
@@ -52,6 +53,9 @@ const AboutMe = () => {
           Github
         </a>
       </motion.div>
+      <Link to="/blog" className="text">
+        Blog
+      </Link>
     </section>
   );
 };
