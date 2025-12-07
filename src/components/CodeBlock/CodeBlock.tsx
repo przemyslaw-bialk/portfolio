@@ -10,7 +10,11 @@ const CodeBlock = ({ code }: CodeBlockProps) => {
     <SyntaxHighlighter
       language="javascript"
       style={atomOneDark}
-      customStyle={{ fontSize: "1.6rem", margin: "0 auto", padding: "20px" }}
+      customStyle={{
+        fontSize: "1.4rem",
+        marginBottom: "2rem",
+        padding: "5px 10px",
+      }}
     >
       {code}
     </SyntaxHighlighter>

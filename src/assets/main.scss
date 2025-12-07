@@ -8,6 +8,7 @@
 @use "../components/ContactForm/contact-form.scss";
 @use "../components/Footer/footer.scss";
 @use "../components/Skills/skills.scss";
+@use "../articles/article.scss";
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap");
 
@@ -46,6 +47,12 @@ h2 {
   text-align: center;
   color: $color-accent;
   text-transform: lowercase;
+}
+
+h3 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
 p {

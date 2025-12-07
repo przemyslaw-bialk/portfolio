@@ -1,0 +1,23 @@
+@use "../assets/styles/base/variables" as *;
+
+.article {
+  font-size: 1.6rem;
+  color: $color-text-primary;
+
+  p {
+    padding: 0.5rem 0;
+  }
+
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 3rem 0;
+  }
+
+  h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 3rem 0;
+    text-transform: uppercase;
+  }
+}
