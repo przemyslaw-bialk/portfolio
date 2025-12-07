@@ -91,6 +91,30 @@ console.log(person['age']);     // 33`}
 console.log(mixedValues[2][1]);   // gruszka
 console.log(mixedValues[3].age);  // 20`}
       />
+      <h3>Zmienne</h3>
+      <p>
+        Zmienne można zadeklarować przy użyciu słowa <b>var</b> <b>const</b>{" "}
+        <b>let</b>. Deklaracja za pomocą <b>var</b> nie jest zalecana i dlatego
+        nie będziemy też z niej tu korzystać. Słowo <b>let</b> służy do
+        deklaracji zmiennych, a <b>const</b> jest przeznaczone do tzw. stałych.
+        W większości przypadków użyamy deklaracji za pomocą słowa <b>const</b>.
+        Jeśli zadeklarujemy zmienną <b>let</b> to możemy zmienić zarówną jej
+        wartość jak i typ.
+      </p>
+      <CodeBlock
+        code={`let value = 10;
+typeof value; // 'number'
+value = 'jakiś tekst';
+typeof value; // 'string'`}
+      />
+      <p>
+        Próbując takiego samego zapisu za pomocą <b>const</b> otrzymamy error.
+      </p>
+      <CodeBlock
+        code={`const age = 20;
+age = 5; // TypeError: Assignment to constant variable.
+age; // 20`}
+      />
     </div>
   );
 };
