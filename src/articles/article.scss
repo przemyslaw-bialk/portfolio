@@ -3,6 +3,7 @@
 .article {
   font-size: 1.6rem;
   color: $color-text-primary;
+  padding: 1rem;
 
   p {
     padding: 0.5rem 0;
@@ -24,5 +25,15 @@
   b {
     color: yellow;
     font-style: italic;
+  }
+
+  &__execution__context {
+    background-color: red;
+
+    &__flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }

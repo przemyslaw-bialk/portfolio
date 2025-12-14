@@ -51,6 +51,26 @@ const OperatorsAndLoops = () => {
         code={`const price = 1000;
 const priceToPay = price > 500 ? price * 0.9 : price; // 900`}
       />
+      <h3>Switch</h3>
+      <p>
+        Alternatywa dla <b>else-if</b>. Ważna różnica polega na tym, że switch
+        porównuje wartości '===' sprawdzając również typ. Należy pamiętać o
+        słowie <b>break</b>, który powoduje zatrzymanie realizacji dalszych
+        instrukcji switch. Element <b>default</b> oznacza wykonanie instrukcji,
+        gdy żadne z powyższych przypadków nie zostały spełnione.
+      </p>
+      <CodeBlock
+        code={`switch (analizowana_wartość) {
+case wartość_1:
+// polecenia do wykonania w przypadku wartość_1
+break;
+case wartość_2:
+// polecenia do wykonania w przypadku wartość_2
+break;
+default:
+// polecenia do wykonania, gdy nie dopasowano żadnego z warunków
+}`}
+      />
     </div>
   );
 };
