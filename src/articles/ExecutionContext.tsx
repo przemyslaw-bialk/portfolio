@@ -21,7 +21,10 @@ const ExecutionContext = () => {
               parameters.
             </li>
             <li>
-              Reference to outer Lexical Environment - links to outer scope.
+              Reference to outer Lexical Environment - links to outer scope,
+              this mechanism is called <b>scope chain</b>. If you have a
+              function "A" inside of other function "B", then its outer
+              reference is function "B".
             </li>
           </ol>
         </p>
@@ -29,16 +32,16 @@ const ExecutionContext = () => {
       <p>
         <b>EXECUTION CONTEXT</b> - a wrapper to help manage the code that is
         running. Execution Context is created in 2 phases. First phase is called
-        "Creation Phase" (global object, "this", outer environment). It setups
-        for you memory space for variables and functions. This process is called
-        - <b>hoisitng</b>. So before even running your code, JS already created
-        for you memory spaces so basically you can call the functions (except
-        function declararations!!!) before declaring it first. THEY ALREADY
-        EXIST IN MEMORY. Important note: Variables declared with <b>var</b> are
-        initialized with <b>undefined</b>.
+        <b> Creation Phase</b> (global object, "this", outer environment). It
+        setups for you memory spaces for variables and functions. This process
+        is called - <b>hoisitng</b>. So before even running your code, JS
+        already created for you memory spaces so basically you can call the
+        functions (except function declararations!!!) before declaring it first.
+        THEY ALREADY EXIST IN MEMORY. Important note: Variables declared with
+        <b>var</b> are initialized with <b>undefined</b>.
         <p>
-          Second phase is called "Execution Phase" which basically means that
-          your code is executed line by line from top to bottom.
+          Second phase is called <b>Execution Phase</b> which basically means
+          that your code is executed line by line from top to bottom.
           <CodeBlock
             code={`console.log(a); // undefined (Creation Phase)
 a = 10;
@@ -47,7 +50,7 @@ function foo() {
   console.log("foo");
 }
 
-foo(); // function is executed in Execution Phase`}
+foo(); // foo - function is executed in Execution Phase`}
           />
         </p>
         <CodeBlock
@@ -80,10 +83,77 @@ console.log(window) // you will find there created code
         another object.
       </p>
       <p>
+        <b>INVOCATION</b> - running a function, calling a function using "()".
+      </p>
+      <p>
+        Let's take a look and go step by step
+        <CodeBlock
+          code={`function b() {}
+function a() {
+b();
+}
+a();`}
+        />
+        First - Global Execution Context is created (global context, "this"
+        keyword), memory spaces are taken/reserved/. After that programm goes
+        from top to bottom meeting call of function a. EVERY TIME you call a
+        function a new <b>execution context</b> is created and put on the top of
+        the
+        <b> call stack</b>. Now it will execute the code within your function
+        from top to bottom. Once its finished it gets POPPED off the call stack.
+      </p>
+      <p>
         <b>UNDEFINED</b> - special value which means that value of variable
         hasn't been defined. NEVER DO THIS: (it would be hard debugging)
         <CodeBlock code={`var a = undefined;`} />
       </p>
+      <p>
+        <b>SINGLE-THREADED</b> – JavaScript executes code using a single call
+        stack, meaning only one task can run at a time. However, the browser
+        itself is not single-threaded and can handle asynchronous tasks in the
+        background.
+      </p>
+      <p>
+        <b>SYNCHRONOUS</b> - one at a time and in the order it appears. Second
+        line waits for the execution of the previous one.
+      </p>
+      <p>
+        <b>ASYNCHRONOUS</b> - more than one at a time.
+      </p>
+      <p>
+        <b>VARIABLE ENVIRONEMNT</b> - where the variable live when you created
+        it. Think about it: "where is the variable".
+      </p>
+      <p>
+        <b>SCOPE</b> - where a variable is available in your code.
+      </p>
+      <p>
+        <b>EVENT QUEUE</b> – a queue that holds callback functions waiting to be
+        executed once the Call Stack is empty. It contains callbacks from Web
+        APIs such as <b>setTimeout</b> and DOM events (for example, click
+        events).
+      </p>
+      <CodeBlock
+        code={`console.log("start");
+
+setTimeout(() => {
+  console.log("timeout");
+}, 0);
+
+console.log("end");
+
+// Output:
+// start
+// end
+// timeout
+
+// Explanation:
+// setTimeout is handled by Web APIs.
+// Once the timer finishes, its callback is placed in the Event Queue.
+// When the Call Stack becomes empty, the Event Loop moves the callback
+// from the Event Queue to the Call Stack, where it gets executed.
+`}
+      />
     </div>
   );
 };
