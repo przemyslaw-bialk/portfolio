@@ -1,6 +1,6 @@
 import CodeBlock from "../components/CodeBlock/CodeBlock";
 
-const ExecutionContext = () => {
+const ExecutionContextEN = () => {
   return (
     <div className="article">
       <h1>Execution Context</h1>
@@ -158,4 +158,4 @@ console.log("end");
   );
 };
 
-export default ExecutionContext;
+export default ExecutionContextEN;

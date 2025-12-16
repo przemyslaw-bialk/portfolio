@@ -1,6 +1,6 @@
 import CodeBlock from "../components/CodeBlock/CodeBlock";
 
-const JSTypes = () => {
+const JSTypesPL = () => {
   return (
     <div className="article">
       <h1>Typy zmiennych</h1>
@@ -119,4 +119,4 @@ age; // 20`}
   );
 };
 
-export default JSTypes;
+export default JSTypesPL;

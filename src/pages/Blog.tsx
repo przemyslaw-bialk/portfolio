@@ -10,7 +10,7 @@ const Blog = () => {
       <ul>
         {articles.map((title) => (
           <li key={title}>
-            <Link to={`/blog/${title}`}>{title.replace("_", " ")}</Link>
+            <Link to={`/blog/${title}`}>{title.replaceAll("_", " ")}</Link>
           </li>
         ))}
       </ul>

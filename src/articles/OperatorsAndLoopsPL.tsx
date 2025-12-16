@@ -1,6 +1,6 @@
 import CodeBlock from "../components/CodeBlock/CodeBlock";
 
-const OperatorsAndLoops = () => {
+const OperatorsAndLoopsPL = () => {
   return (
     <div className="article">
       <h1>Operatory i pętle</h1>
@@ -75,4 +75,4 @@ default:
   );
 };
 
-export default OperatorsAndLoops;
+export default OperatorsAndLoopsPL;
