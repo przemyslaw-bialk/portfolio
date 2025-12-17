@@ -4,6 +4,7 @@ import type { FC } from "react";
 import OperatorsAndLoopsPL from "../articles/OperatorsAndLoopsPL";
 import ExecutionContextEN from "../articles/ExecutionContextEN";
 import PrimitiveTypesAndOperatorsEN from "../articles/PrimitiveTypesAndOperatorsEN";
+import ObjectsAndFunctionsEn from "../articles/ObjectsAndFunctionsEN";
 
 export type ArticlesMap = {
   // [key: string] = typ obiektu typu string FC = component
@@ -16,4 +17,5 @@ export const articlesMap: ArticlesMap = {
   operators_and_loops_PL: OperatorsAndLoopsPL,
   execution_context_EN: ExecutionContextEN,
   primitive_types_and_operators_EN: PrimitiveTypesAndOperatorsEN,
+  objects_and_functions_EN: ObjectsAndFunctionsEn,
 };

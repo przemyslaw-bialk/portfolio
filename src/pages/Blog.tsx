@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { articlesMap } from "../data/articles";
 
 const articles = Object.keys(articlesMap);
@@ -14,6 +14,7 @@ const Blog = () => {
           </li>
         ))}
       </ul>
+      <Outlet />
     </div>
   );
 };
