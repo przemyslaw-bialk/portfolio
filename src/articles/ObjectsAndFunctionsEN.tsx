@@ -67,6 +67,75 @@ let person = {firstname: 'Przemek', lastname: 'Bialk'}; // object literal is cre
         value. They can be assigned to variables, passed as arguments to other
         functions, returned from functions, and you can create them on the fly.
       </p>
+      <CodeBlock
+        code={`function log(fn) {
+  fn();
+}
+
+log(function () {
+  console.log("hi");
+});`}
+      />
+      <p>
+        <b>EXPRESSION</b> - a piece of code that results in a value. It ends up
+        creating a value.
+      </p>
+      <CodeBlock
+        code={`// expressions - they evaluate to a value
+1 + 2;  // 3
+"hi";   // "hi"
+a = 10;  // 10
+`}
+      />
+      <p>
+        Function declarations are hoisted entirely, function expressions are
+        not.
+      </p>
+      <CodeBlock
+        code={`// function statement / function declaration 
+// Hoisted – can be invoked before the function definition
+greet(); // hi
+function greet() {
+console.log("hi");
+} `}
+      />
+      <CodeBlock
+        code={`// function expression - NOT hoisted, cant call it before assigment.
+greet(); // ❌ WRONG! ReferenceError
+const greet = function() {
+console.log("hi");
+} `}
+      />
+      <h3>by value vs by reference</h3>
+      <p>
+        <b>by value (for primitives)</b> - passes a copy of the value and
+        creates a new memory address.
+      </p>
+      <CodeBlock
+        code={`let a = 10; // address 0x0001
+let b = a; // address 0x0002
+b = 20;
+console.log(a); // 10
+console.log(b); // 20`}
+      />
+      <p>
+        <b>by reference (for objects including functions)</b> - passes a
+        REFERENCE to a memory address. Both variables point to the same object,
+        so mutations affect the original.
+      </p>
+      <CodeBlock
+        code={`const obj1 = { name: "Przemek" }; // address 0x0001
+const obj2 = obj1;  // address is still the same: 0x0001
+obj2.name = "John"; // mutate
+console.log(obj1.name); // John - original object changed
+console.log(obj2.name); // John`}
+      />
+      <p>
+        <b>MUTATE</b> - to change something.
+      </p>
+      <p>
+        <b>IMMUTABLE</b> - can't be changed.
+      </p>
     </div>
   );
 };
