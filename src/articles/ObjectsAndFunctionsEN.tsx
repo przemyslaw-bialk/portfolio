@@ -279,6 +279,33 @@ console.log(sum(5, 10, 15, 20)); // 50`}
         REMEMBER - JavaScript always copies values; if a value is an{" "}
         <b>object</b>, it copies it by <b>reference</b>.
       </p>
+      <h3>Immediately Invoked Functions Expressions - IIFE</h3>
+      <p>
+        <b>Immediately Invoked Function Expression</b> - a function expression
+        that is executed immediately after it is created.
+      </p>
+      <CodeBlock
+        code={`(function(name) {
+  console.log("Hello" + name);
+})("Przemek"); // Hello Przemek`}
+      />
+      <h3>CLOSURES</h3>
+      <p>
+        <b>CLOSURE</b> – a mechanism that lets functions access variables from
+        its outer scope even after that scope is gone.
+      </p>
+      <CodeBlock
+        code={`function outer() {
+  let x = 10;
+ function inner() {
+// it has access to "X" due to closure mechanism
+  console.log(x);
+  }
+  return inner;
+}
+const fn = outer();
+fn(); // 10`}
+      />
     </div>
   );
 };
