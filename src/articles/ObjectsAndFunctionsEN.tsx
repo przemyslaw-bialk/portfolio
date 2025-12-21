@@ -306,6 +306,33 @@ console.log(sum(5, 10, 15, 20)); // 50`}
 const fn = outer();
 fn(); // 10`}
       />
+      <h3>CALLBACK FUNCTION</h3>
+      <p>
+        <b>CALLBACK FUNCTION</b> – a function that is passed as an argument to
+        another function and is executed later, usually after an operation is
+        completed or when a specific event occurs.
+      </p>
+      <CodeBlock
+        code={`function greet(callback) {
+  console.log("Hello");
+
+  // setTimeout takes a CALLBACK FUNCTION
+  setTimeout(function() {
+    // this function is the CALLBACK
+    callback();
+  }, 1000);
+}
+
+// this anonymous function is a CALLBACK
+greet(function() {
+  console.log("I am a callback!");
+});
+
+// Output:
+// Hello
+// (after 1 second)
+// I am a callback!`}
+      />
     </div>
   );
 };
