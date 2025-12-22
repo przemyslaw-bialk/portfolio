@@ -333,6 +333,40 @@ greet(function() {
 // (after 1 second)
 // I am a callback!`}
       />
+      <h3>call(), apply(), bind()</h3>
+      <p>
+        Call(), apply(), bind() are methods available on all functions in
+        JavaScript. They allow you to explicitly control what this refers to
+        when a function is executed.
+      </p>
+      <CodeBlock
+        code={`const person = {
+  firstname: "John",
+  lastname: "Doe",
+  getFullName: function () {
+    return this.firstname + " " + this.lastname;
+  }
+};
+
+const logName = function () {
+  console.log("Logged as " + this.getFullName());
+};
+
+// without binding, this points to global object (or undefined in strict mode)
+logName(); //  error: this.getFullName is not a function
+
+// bind() - returns a NEW function with this permanently set
+const logPersonName = logName.bind(person);
+logPersonName(); // Logged as John Doe
+
+// call() - invokes function immediately, sets this explicitly
+logName.call(person); // Logged as John Doe
+
+// apply() - same as call, but arguments are passed as an array
+logName.apply(person); // Logged as John Doe
+
+`}
+      />
     </div>
   );
 };
