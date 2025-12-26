@@ -7,6 +7,7 @@ import PrimitiveTypesAndOperatorsEN from "../articles/PrimitiveTypesAndOperators
 import ObjectsAndFunctionsEn from "../articles/ObjectsAndFunctionsEN";
 import ObjectOrientedJavaScriptEN from "../articles/ObjectOrientedJavaScriptEN";
 import AsyncAwaitEN from "../articles/AsyncAwaitEN";
+import IteratorsEN from "../articles/IteratorsEN";
 
 export type ArticlesMap = {
   // [key: string] = typ obiektu typu string FC = component
@@ -22,4 +23,5 @@ export const articlesMap: ArticlesMap = {
   objects_and_functions_EN: ObjectsAndFunctionsEn,
   object_oriented_java_script_EN: ObjectOrientedJavaScriptEN,
   async_await_EN: AsyncAwaitEN,
+  iterators_EN: IteratorsEN,
 };
