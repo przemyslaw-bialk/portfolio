@@ -1,5 +1,5 @@
 import JSTypesPL from "../articles/JSTypesPL";
-import ArrayMethods from "../articles/ArrayMethods";
+import ArrayMethodsPL from "../articles/ArrayMethodsPL";
 import type { FC } from "react";
 import OperatorsAndLoopsPL from "../articles/OperatorsAndLoopsPL";
 import ExecutionContextEN from "../articles/ExecutionContextEN";
@@ -16,7 +16,7 @@ export type ArticlesMap = {
 
 export const articlesMap: ArticlesMap = {
   js_types_PL: JSTypesPL,
-  array_methods: ArrayMethods,
+  array_methods_PL: ArrayMethodsPL,
   operators_and_loops_PL: OperatorsAndLoopsPL,
   execution_context_EN: ExecutionContextEN,
   primitive_types_and_operators_EN: PrimitiveTypesAndOperatorsEN,
