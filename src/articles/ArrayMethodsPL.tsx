@@ -106,6 +106,66 @@ console.log(array.fill(6));
 `}
         />
       </p>
+      <p>
+        <b>filter()</b> - metoda tworzy shallow copy. Jako argument przyjmuje
+        callback function. Zwraca te elementy, które spełniają warunek.
+        <CodeBlock
+          code={`// lets filter numbers greater than 10
+const numbers = [1, 22, 123, 4, 0, 53];
+const result = numbers.filter((num) => num > 10);
+console.log(result); // [22, 123, 53]       
+`}
+        />
+      </p>
+      <p>
+        <b>find()</b> - metoda zwraca pierwszy element, który spełnia warunek.
+        Jako argument przyjmuje callback function. Jeśli żaden element nie
+        spełnia warunku - dostaniemy <b>undefined</b>.
+        <CodeBlock
+          code={`const inventory = [
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
+];
+
+const result = inventory.find(({ name }) => name === "cherries");
+
+console.log(result); // { name: 'cherries', quantity: 5 }
+`}
+        />
+      </p>
+      <p>
+        <b>findLast()</b> - metoda zwraca pierwszy element, który spełnia
+        warunek iterując od końca tablicy (od ostatniego elementu). Jako
+        argument przyjmuje callback function. Jeśli żaden element nie spełnia
+        warunku - dostaniemy <b>undefined</b>.
+        <CodeBlock
+          code={`const array = [5, 12, 50, 130, 44];
+const found = array.findLast((element) => element > 45);
+console.log(found);
+// Expected output: 130
+`}
+        />
+      </p>
+      <p>
+        <b>findIndex()</b> - zwraca indeks pierwszego elementu, który spełnia
+        warunek. Jako argument przyjmuje callback function. Gdy nie znajdzie
+        elementu spełniającego warunek, zwraca -1. Pomocna gdy chcemy usunąć lub
+        edytować element.
+        <CodeBlock
+          code={`const users = [
+  { id: 1, name: "Ala" },
+  { id: 2, name: "Ola" }
+];
+
+const index = users.findIndex(u => u.id === 2);
+
+if (index !== -1) {
+  users[index].name = "Ela";
+}
+`}
+        />
+      </p>
     </div>
   );
 };
