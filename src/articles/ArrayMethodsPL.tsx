@@ -151,7 +151,8 @@ console.log(found);
         <b>findIndex()</b> - zwraca indeks pierwszego elementu, który spełnia
         warunek. Jako argument przyjmuje callback function. Gdy nie znajdzie
         elementu spełniającego warunek, zwraca -1. Pomocna gdy chcemy usunąć lub
-        edytować element.
+        edytować element. Gdy chcesz iterować od końca użyj{" "}
+        <b>findLastIndex()</b>.
         <CodeBlock
           code={`const users = [
   { id: 1, name: "Ala" },
@@ -164,6 +165,36 @@ if (index !== -1) {
   users[index].name = "Ela";
 }
 `}
+        />
+      </p>
+      <p>
+        <b>flat()</b> - metoda tworząca jedną tablicę, jeśli tablica sama w
+        sobie zawiera tablicę. Jako argument może przyjąć stopień zagdnieżdzenia
+        jako numer. Domyślnie to: 1. Możliwość podania jako argumentu{" "}
+        <b>Infinity</b> - w ten sposób tworzymy jedną tablicę niezależnie od
+        wielkośći zagdnieżdzenia. Zwraca nową tablicę.
+        <CodeBlock
+          code={`const arr1 = [1, 2, [3, 4]];
+arr1.flat();
+// [1, 2, 3, 4]
+
+const arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+arr4.flat(Infinity);
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`}
+        />
+      </p>
+      <p>
+        <b>flatMap()</b> - to metoda, która łączy map() i flat(1) w jednym
+        kroku. Najpierw mapuje elementy tablicy, a potem spłaszcza wynik o jeden
+        poziom. Nie spłaszcza tablicy wejściowej — spłaszcza TABLICE ZWRÓCONE
+        PRZEZ CALLBACK.
+        <CodeBlock
+          code={`const sentences = ["hello world", "js is cool"];
+
+// split zwraca nową, zagnieżdżoną tablicę
+const words = sentences.flatMap(sentence => sentence.split(" "));
+
+console.log(words); // ["hello", "world", "js", "is", "cool"]`}
         />
       </p>
     </div>
