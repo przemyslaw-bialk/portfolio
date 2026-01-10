@@ -197,6 +197,97 @@ const words = sentences.flatMap(sentence => sentence.split(" "));
 console.log(words); // ["hello", "world", "js", "is", "cool"]`}
         />
       </p>
+      <p>
+        <b>forEach()</b> - jako argument przyjmuje callback function, który jest
+        egzekwowana na każdym elemencie tablicy. Metoda nie zwraca nowej
+        tablicy.
+        <CodeBlock
+          code={`const items = ["apple", "banana", "grape"];
+const copy = [];
+
+items.forEach(item => {
+  copy.push(item);
+});
+
+console.log(copy);
+// ["apple", "banana", "grape"]`}
+        />
+      </p>
+      <p>
+        <b>includes()</b> - jako argument przyjmuje szukaną wartość i zwraca
+        true lub false.
+        <CodeBlock
+          code={`const array = [1, 2, 3];
+console.log(array.includes(2)); // true
+`}
+        />
+      </p>
+      <p>
+        <b>indexOf()</b> - zwraca indeks szukanego elementu bądź -1 gdy go nie
+        znajdzie. Porównuje elementy za pomocą <b>strict equality (===)</b> -
+        czyli sprawdza też typ. Nie działa z obiektami. Dla obiektów użyj{" "}
+        <b>findIndex()</b>.
+        <CodeBlock
+          code={`const items = ["apple", "banana", "grape"];
+items.indexOf("apple"); // 0
+
+// DOES NOT WORK FOR OBJECTS
+const arr = [{ a: 1 }];
+arr.indexOf({ a: 1 }); // -1 
+`}
+        />
+      </p>
+      <p>
+        <b>join()</b> - łączy wszystkie elementy tablicy w jeden string i zwraca
+        go. Jako argument przyjmuje separator (domyślnie przecinek). Metoda nie
+        modyfikuje oryginalnej tablicy. Null i undefined są traktowane jako
+        pusty string.
+        <CodeBlock
+          code={`const items = ["apple", "banana", "grape"];
+items.join();
+// "apple,banana,grape"
+items.join("-");
+// "apple-banana-grape"
+`}
+        />
+      </p>
+      <p>
+        <b>map()</b> – tworzy nową tablicę, stosując funkcję callback do każdego
+        elementu tablicy. Nie modyfikuje oryginalnej tablicy i zawsze zwraca
+        tablicę o tej samej długości.
+        <CodeBlock
+          code={`const numbers = [1, 2, 3, 4];
+
+const doubled = numbers.map(num => num * 2);
+console.log(doubled);
+// [2, 4, 6, 8]
+
+// oryginalna tablica pozostaje bez zmian
+console.log(numbers);
+// [1, 2, 3, 4]`}
+        />
+      </p>
+      <p>
+        <b>pop()</b> – usuwa ostatni element tablicy i go zwraca. Modyfikuje
+        oryginał. Zwraca undefined gdy tablica jest pusta.
+        <CodeBlock
+          code={`const plants = ["broccoli", "cauliflower", "cabbage", "kale", "tomato"];
+
+console.log(plants.pop()); // "tomato"
+console.log(plants); // ["broccoli", "cauliflower", "cabbage", "kale"]
+`}
+        />
+      </p>
+      <p>
+        <b>push()</b> – dodaje element na koniec tablicy. Modyfikuje oryginał i
+        zwraca jej nową długość.
+        <CodeBlock
+          code={`const animals = ["pigs", "goats", "sheep"];
+animals.push("cows");
+console.log(animals); // ["pigs", "goats", "sheep", "cows"]
+`}
+        />
+      </p>
     </div>
   );
 };
