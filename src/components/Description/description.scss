@@ -34,7 +34,18 @@
 @media (max-width: 700px) {
   .description {
     &__flex {
+      flex-direction: column;
       gap: 2rem;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__photo {
+      margin-left: 0;
+    }
+
+    &__text {
+      padding: 1rem;
     }
   }
 }

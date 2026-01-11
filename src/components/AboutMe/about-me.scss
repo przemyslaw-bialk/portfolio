@@ -60,12 +60,10 @@
 }
 
 @media (max-width: 600px) {
-  .about-me__name {
-    font-size: 3.5rem;
-  }
-
   .about-me__description {
     letter-spacing: 4px;
+    text-align: center;
+    font-size: 1.4rem;
   }
 }
 
