@@ -33,7 +33,7 @@ const Blog = () => {
     }
   };
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <Link to="/">
         <h2>Blog</h2>
       </Link>
@@ -47,7 +47,7 @@ const Blog = () => {
       >
         <div>
           <button className="menu" onClick={() => handleMenu()}>
-            menu
+            articles
           </button>
           {showMenu && (
             <ul className={`menu__ul ${showMenu ? "menu__ul--open" : ""}`}>

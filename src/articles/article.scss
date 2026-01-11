@@ -11,14 +11,14 @@
   }
 
   h1 {
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     margin: 3rem 0;
   }
 
   h3 {
     font-size: 2rem;
-    text-align: center;
+    text-align: left;
     margin: 3rem 0;
     text-transform: uppercase;
   }
@@ -26,6 +26,25 @@
   b {
     color: yellow;
     font-style: italic;
+  }
+
+  /* CODEBLOCK RESPONSIVE */
+  pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+    background-color: #282c34;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 700px) {
+    pre {
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
   }
 
   &__execution__context {
