@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
@@ -7,13 +6,7 @@ type CodeBlockProps = {
 };
 
 const CodeBlock = ({ code }: CodeBlockProps) => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    if (window.innerWidth <= 600) {
-      setIsMobile(true);
-    }
-  }, []);
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 600;
 
   return (
     <SyntaxHighlighter
