@@ -1,25 +1,10 @@
 import { Link, Outlet } from "react-router-dom";
 import { articlesMap } from "../data/articles";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const articles = Object.keys(articlesMap);
 
 const Blog = () => {
-  // show menu when back to desktop from mobile
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 950) {
-        setShowMenu(true);
-      }
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    // cleanup function
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const [showMenu, setShowMenu] = useState(true);
 
   const handleMenu = () => {
@@ -35,7 +20,16 @@ const Blog = () => {
   return (
     <div style={{ position: "relative" }}>
       <Link to="/">
-        <h2>Blog</h2>
+        <h2
+          style={{
+            position: "absolute",
+            top: 0,
+            left: "50%",
+            transform: "translateX(-50%)",
+          }}
+        >
+          Blog
+        </h2>
       </Link>
       <div
         style={{
