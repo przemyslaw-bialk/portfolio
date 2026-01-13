@@ -288,6 +288,93 @@ console.log(animals); // ["pigs", "goats", "sheep", "cows"]
 `}
         />
       </p>
+      <p>
+        <b>reverse()</b> – odwraca kolejność elementów tablicy. Mutuje oryginał.
+        Jeśli nie chcesz mutować - zastosuj <b>toReversed()</b>
+        <CodeBlock
+          code={`const animals = ["pigs", "goats", "sheep"];
+animals.reverse();
+console.log(animals); // ["sheep", "goats", "pigs"]
+`}
+        />
+      </p>
+      <p>
+        <b>shift()</b> – usuwa pierwszy element tablicy i go zwraca. Mutuje
+        oryginał. Wolniejszy od <b>pop()</b> bo musi przepisać inkdeksy.
+        <CodeBlock
+          code={`const animals = ["pigs", "goats", "sheep"];
+const firstEl = animals.shift();
+console.log(firstEl); // pigs
+console.log(animals); // ["goats", "sheep"]
+`}
+        />
+      </p>
+      <p>
+        <b>slice()</b> – zwraca nową tablicę z wybranego fragmentu oryginalnej
+        tablicy. Nie mutuje oryginału. Przyjmuje indeks początkowy oraz końcowy.
+        Element o indeksie początkowym jest wliczany do nowej tablicy. Element o
+        indeksie końcowym NIE jest wliczany do nowej tablicy.
+        <CodeBlock
+          code={`const animals = ["pigs", "goats", "sheep", "cows"];
+
+const part = animals.slice(1, 3);
+
+console.log(part);    // ["goats", "sheep"]
+console.log(animals); // ["pigs", "goats", "sheep", "cows"]`}
+        />
+      </p>
+      <p>
+        <b>some()</b> – zwraca true, jeśli przynajmniej jeden element spełnia
+        warunek callback function.
+        <CodeBlock
+          code={`const nums = [1, 2, 15, 655, 2];
+nums.some((num) => num > 500);
+// true`}
+        />
+      </p>
+      <p>
+        <b>sort()</b> – sortuje elementy tablicy według funkcji porównującej.
+        Callback musi zwrócić liczbę: ujemną, gdy parametr <b>A</b> ma być przed{" "}
+        <b>B</b>, dodatnią, gdy <b>B</b> ma być przed <b>A</b>, lub 0, gdy
+        kolejność ma pozostać bez zmian. Metoda <b>mutuje</b> oryginalną
+        tablicę. Gdy nie chcesz mutować tablicy, użyj <b>toSorted()</b>. Bez
+        callbacka sortuje tak, jakby elementy były stringami.
+        <CodeBlock
+          code={`const nums = [10, 2, 5, 1];
+// ascending
+nums.sort((a, b) => a - b);
+console.log(nums); // [1, 2, 5, 10]
+
+// descending
+nums.sort((a, b) => b - a);
+console.log(nums); // [10, 5, 2, 1]`}
+        />
+      </p>
+      <p>
+        <b>splice()</b> – modyfikuje tablicę, usuwając, dodając lub zastępując
+        elementy. Przyjmuje indeks początkowy, liczbę elementów do usunięcia
+        oraz opcjonalnie nowe elementy do dodania. Zwraca tablicę z usuniętymi
+        elementami.
+        <CodeBlock
+          code={`const animals = ["pigs", "goats", "sheep", "cows"];
+
+// usunięcie elementu
+const removed = animals.splice(1, 2);
+
+console.log(removed); // ["goats", "sheep"]
+console.log(animals); // ["pigs", "cows"]`}
+        />
+        <CodeBlock
+          code={`const animals = ["pigs", "goats", "sheep"];
+animals.splice(1, 0, "cows");
+console.log(animals); // ["pigs", "cows", "goats", "sheep"]`}
+        />
+        <CodeBlock
+          code={`const animals = ["pigs", "goats", "sheep"];
+animals.splice(1, 1, "cows");
+console.log(animals); // ["pigs", "cows", "sheep"]`}
+        />
+      </p>
     </div>
   );
 };
