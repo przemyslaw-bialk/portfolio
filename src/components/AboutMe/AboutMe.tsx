@@ -53,7 +53,7 @@ const AboutMe = () => {
           Github
         </a>
       </motion.div>
-      <Link to="/blog/js_types_PL" className="text">
+      <Link to="/blog/execution_context_EN" className="text">
         Blog
       </Link>
     </section>

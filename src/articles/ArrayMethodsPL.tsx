@@ -32,7 +32,7 @@ copy[0].a = 99;
 console.log(original[0].a); // 99 ZMIANA RÓWNIEŻ W ORYGINALE`}
       />
       <p>
-        <b>array.from()</b> - metoda służąca do tworzenia <b>shallow copy</b>.
+        <b>Array.from()</b> - metoda służąca do tworzenia <b>shallow copy</b>.
         Alternatywa dla <b>spread operator [...arguments]</b>. Jako drugi
         argument może przyjąć funkcje.
       </p>
@@ -45,7 +45,7 @@ console.log(original[0].a); // 99 ZMIANA RÓWNIEŻ W ORYGINALE`}
 // [2, 4, 6]`}
       />
       <p>
-        <b>array.of()</b> - tworzy nową tablicę z przekazanych argumentów.
+        <b>Array.of()</b> - tworzy nową tablicę z przekazanych argumentów.
         <CodeBlock
           code={`const arr = Array.of(1, "b", { name: "ala" });
 // [1, "b", { name: "ala" }]`}
@@ -373,6 +373,77 @@ console.log(animals); // ["pigs", "cows", "goats", "sheep"]`}
           code={`const animals = ["pigs", "goats", "sheep"];
 animals.splice(1, 1, "cows");
 console.log(animals); // ["pigs", "cows", "sheep"]`}
+        />
+      </p>
+      <p>
+        <b>toLocaleString()</b> – zwraca string wszystkich elementów tablicy.
+        Służy głównie do formatowania danych pod użytkownika, nie do logiki.
+        Często używany do dat.
+        <CodeBlock
+          code={`const price = 1999.99;
+price.toLocaleString("pl-PL", {
+  style: "currency",
+  currency: "PLN"
+});
+// "1 999,99 zł"`}
+        />
+        <p>
+          <b>Date.toLocaleString()</b> – zwraca datę i godzinę sformatowaną
+          zgodnie z ustawieniami regionalnymi.
+          <CodeBlock
+            code={`const date = new Date("2024-06-15T14:30:00");
+
+date.toLocaleString("pl-PL");
+// "15.06.2024, 14:30:00"
+date.toLocaleString("en-US");
+// "6/15/2024, 2:30:00 PM"`}
+          />
+        </p>
+      </p>
+      <p>
+        <b>toString()</b> – zwraca string elementów tablicy używając przecinka.
+        Nie przyjmuje argumentów. Swego rodzaju skrót do <b>join()</b>.
+        <CodeBlock
+          code={`const array = [1, 2, "a", "1a"];
+console.log(array.toString()); // "1,2,a,1a"
+`}
+        />
+      </p>
+      <p>
+        <b>unshift()</b> – dodaje element na początek tablicy i zwraca jej nową
+        długość. Jako argument przyjmuje elementy, które chcemy dodać.
+        <CodeBlock
+          code={`const array = [1, 2, 3];
+array.unshift(4, 5);
+console.log(array); // [4, 5, 1, 2, 3]
+`}
+        />
+      </p>
+      <p>
+        <b>values()</b> – zwraca iterator zawierający wartości elementów
+        tablicy. Metoda nie mutuje tablicy. Najczęściej używana w pętli{" "}
+        <b>for...of</b>.
+        <CodeBlock
+          code={`const animals = ["pigs", "goats", "sheep"];
+const iterator = animals.values();
+for (const value of iterator) {
+  console.log(value);
+}
+// pigs
+// goats
+// sheep`}
+        />
+      </p>
+      <p>
+        <b>with()</b> – zwraca nową tablicę z podmienionym elementem na danym
+        indeksie. Nie mutuje oryginalnej tablicy. Pierwszy argument metody to
+        indeks. Drugi argument metody to element, który chcemy wstawić do
+        tablicy.
+        <CodeBlock
+          code={`const animals = ["pigs", "goats", "sheep"];
+const updated = animals.with(1, "cows");
+console.log(updated); // ["pigs", "cows", "sheep"]
+console.log(animals); // ["pigs", "goats", "sheep"]`}
         />
       </p>
     </div>
