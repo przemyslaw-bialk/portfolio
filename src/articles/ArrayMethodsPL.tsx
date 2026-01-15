@@ -199,7 +199,7 @@ console.log(words); // ["hello", "world", "js", "is", "cool"]`}
       </p>
       <p>
         <b>forEach()</b> - jako argument przyjmuje callback function, który jest
-        egzekwowana na każdym elemencie tablicy. Metoda nie zwraca nowej
+        egzekwowany na każdym elemencie tablicy. Metoda nie zwraca nowej
         tablicy.
         <CodeBlock
           code={`const items = ["apple", "banana", "grape"];
@@ -286,6 +286,35 @@ console.log(plants); // ["broccoli", "cauliflower", "cabbage", "kale"]
 animals.push("cows");
 console.log(animals); // ["pigs", "goats", "sheep", "cows"]
 `}
+        />
+      </p>
+      <p>
+        <b>reduce()</b> – iteruje po tablicy i sprowadza ją do jednej wartości
+        (np. liczby, stringa, obiektu, innej tablicy). Nie mutuje oryginału.
+        <br />
+        Składnia:
+        <CodeBlock
+          code={`array.reduce((acc, current) => {
+  return acc;
+}, initialValue);
+`}
+        />
+        Przykład - suma liczb:
+        <CodeBlock
+          code={`const numbers = [1, 2, 3, 4];
+const sum = numbers.reduce((acc, number) => acc + num, 0);
+// 10
+          `}
+        />
+        Przykład - zliczenie wystąpień:
+        <CodeBlock
+          code={`const fruits = ["apple", "banana", "apple", "orange", "banana"];
+const count = fruits.reduce((acc, fruit) => {
+  acc[fruit] = (acc[fruit] || 0) + 1;
+  return acc;
+}, {});
+console.log(count);
+// { apple: 2, banana: 2, orange: 1 }`}
         />
       </p>
       <p>
