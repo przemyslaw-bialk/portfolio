@@ -9,11 +9,10 @@ import Skills from "../components/Skills/Skills";
 import { PiCassetteTapeLight } from "react-icons/pi";
 import {
   IoBookOutline,
-  IoCarSportOutline,
   IoRestaurantOutline,
   IoBagCheckOutline,
 } from "react-icons/io5";
-import { GiBoatFishing } from "react-icons/gi";
+import { GiBoatFishing, GiSushis } from "react-icons/gi";
 
 const Home = () => {
   const projects = [
@@ -32,19 +31,19 @@ const Home = () => {
       live_version: "https://tiste.pl/",
     },
     {
+      title: "sea & roll",
+      tags: ["tailwind", "based on design", "commercial project"],
+      logo: <GiSushis />,
+      github: "https://github.com/przemyslaw-bialk/sushi-restaurant",
+      live_version: "https://searoll.pl/",
+    },
+    {
       title: "tapes-transfer",
       description: "company site built with REACT",
       tags: ["react", "styled-components", "commercial project"],
       logo: <PiCassetteTapeLight />,
       github: "https://github.com/przemyslaw-bialk/kasety",
       live_version: "https://tapestransfer.com/",
-    },
-    {
-      title: "osk-abas",
-      tags: ["react", "design", "commercial project"],
-      logo: <IoCarSportOutline />,
-      github: "https://github.com/przemyslaw-bialk/abas",
-      live_version: "https://osk-abas.pl/",
     },
     {
       title: "restauracja leśna",
