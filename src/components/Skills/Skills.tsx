@@ -14,7 +14,8 @@ type Skill =
   | "TAILWIND"
   | "NODE.JS"
   | "MONGO DB"
-  | "GIT";
+  | "GIT"
+  | "NEXTJS";
 
 const masteredSkills: Skill[] = [
   "HTML",
@@ -22,6 +23,7 @@ const masteredSkills: Skill[] = [
   "JAVASCRIPT",
   "REACT",
   "REST API",
+  "TAILWIND",
   "RWS",
   "BEM",
   "SASS",
@@ -31,7 +33,7 @@ const masteredSkills: Skill[] = [
 
 const learningSkills: Skill[] = [
   "TYPE SCRIPT",
-  "TAILWIND",
+  "NEXTJS",
   "NODE.JS",
   "MONGO DB",
 ];
