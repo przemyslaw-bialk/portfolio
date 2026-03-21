@@ -9,9 +9,10 @@ import ObjectOrientedJavaScriptEN from "../articles/ObjectOrientedJavaScriptEN";
 import AsyncAwaitEN from "../articles/AsyncAwaitEN";
 import IteratorsEN from "../articles/IteratorsEN";
 import MongoWithNextjsEN from "../articles/MongoWithNextjsEN";
+import StaticVsDynamicNext from "../articles/StaticVsDynamicNext";
 
 export type ArticlesMap = {
-  // [key: string] = typ obiektu typu string FC = component
+  // [key: string] = typ obiektu typu string / FC = component
   [key: string]: FC;
 };
 
@@ -26,4 +27,5 @@ export const articlesMap: ArticlesMap = {
   async_await_EN: AsyncAwaitEN,
   iterators_EN: IteratorsEN,
   mongo_with_nextJS_EN: MongoWithNextjsEN,
+  static_vs_dynamic_in_next_EN: StaticVsDynamicNext,
 };
