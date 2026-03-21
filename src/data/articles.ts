@@ -10,6 +10,7 @@ import AsyncAwaitEN from "../articles/AsyncAwaitEN";
 import IteratorsEN from "../articles/IteratorsEN";
 import MongoWithNextjsEN from "../articles/MongoWithNextjsEN";
 import StaticVsDynamicNext from "../articles/StaticVsDynamicNext";
+import CachingInNext from "../articles/CachingInNext";
 
 export type ArticlesMap = {
   // [key: string] = typ obiektu typu string / FC = component
@@ -28,4 +29,5 @@ export const articlesMap: ArticlesMap = {
   iterators_EN: IteratorsEN,
   mongo_with_nextJS_EN: MongoWithNextjsEN,
   static_vs_dynamic_in_next_EN: StaticVsDynamicNext,
+  caching_in_next_EN: CachingInNext,
 };
