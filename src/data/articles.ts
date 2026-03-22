@@ -11,11 +11,11 @@ import IteratorsEN from "../articles/IteratorsEN";
 import MongoWithNextjsEN from "../articles/MongoWithNextjsEN";
 import StaticVsDynamicNext from "../articles/StaticVsDynamicNext";
 import CachingInNext from "../articles/CachingInNext";
+import TypeScriptforReactEN from "../articles/TypeScriptForReactEN";
 
-export type ArticlesMap = {
-  // [key: string] = typ obiektu typu string / FC = component
-  [key: string]: FC;
-};
+export type ArticlesMap = Record<string, FC>;
+// [key: string] = typ obiektu typu string / FC = component
+// [key: string]: FC;
 
 export const articlesMap: ArticlesMap = {
   js_types_PL: JSTypesPL,
@@ -30,4 +30,5 @@ export const articlesMap: ArticlesMap = {
   mongo_with_nextJS_EN: MongoWithNextjsEN,
   static_vs_dynamic_in_next_EN: StaticVsDynamicNext,
   caching_in_next_EN: CachingInNext,
+  typescript_for_react_EN: TypeScriptforReactEN,
 };
