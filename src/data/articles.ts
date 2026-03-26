@@ -12,6 +12,7 @@ import MongoWithNextjsEN from "../articles/MongoWithNextjsEN";
 import StaticVsDynamicNext from "../articles/StaticVsDynamicNext";
 import CachingInNext from "../articles/CachingInNext";
 import TypeScriptforReactEN from "../articles/TypeScriptForReactEN";
+import ReduxToolkitEN from "../articles/ReduxToolkitEN";
 
 export type ArticlesMap = Record<string, FC>;
 // [key: string] = typ obiektu typu string / FC = component
@@ -31,4 +32,5 @@ export const articlesMap: ArticlesMap = {
   static_vs_dynamic_in_next_EN: StaticVsDynamicNext,
   caching_in_next_EN: CachingInNext,
   typescript_for_react_EN: TypeScriptforReactEN,
+  redux_toolkit_EN: ReduxToolkitEN,
 };
