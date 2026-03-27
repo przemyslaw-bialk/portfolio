@@ -5,11 +5,13 @@ const ReduxToolkitEN = () => {
     <div className="article">
       <h1>Redux Toolkit – Complete Beginner Guide</h1>
 
-      <h3>configureStore</h3>
+      <h3>configureStore and installation</h3>
       <p>
         The <b>configureStore</b> automatically sets up Redux with a default
         configuration, including Redux DevTools, thunk middleware, and other
-        essential tools.
+        essential tools. <br />
+        <b>Installation:</b>
+        <CodeBlock code={`npm install @reduxjs/toolkit react-redux`} />
       </p>
       <p>Let’s create a Redux store by providing a reducer object.</p>
 
