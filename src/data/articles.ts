@@ -14,6 +14,7 @@ import CachingInNext from "../articles/CachingInNext";
 import TypeScriptforReactEN from "../articles/TypeScriptForReactEN";
 import ReduxToolkitEN from "../articles/ReduxToolkitEN";
 import ServerAndClientComponentsEN from "../articles/ServerAndClientComponentsEN";
+import FetchingInNextEN from "../articles/FetchingInNextEN";
 
 export type ArticlesMap = Record<string, FC>;
 // [key: string] = typ obiektu typu string / FC = component
@@ -35,4 +36,5 @@ export const articlesMap: ArticlesMap = {
   typescript_for_react_EN: TypeScriptforReactEN,
   redux_toolkit_EN: ReduxToolkitEN,
   server_and_clients_components_EN: ServerAndClientComponentsEN,
+  fetching_in_nextjs_EN: FetchingInNextEN,
 };

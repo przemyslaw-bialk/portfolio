@@ -2,6 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import { articlesMap } from "../data/articles";
 import { useState } from "react";
 
+// getting "links" from my object
 const articles = Object.keys(articlesMap);
 
 const Blog = () => {
