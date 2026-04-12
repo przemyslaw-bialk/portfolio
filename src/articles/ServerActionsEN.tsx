@@ -134,7 +134,6 @@ export default function Page() {
   return <ClientForm action={createPost} />
 }`}
       />
-
       <CodeBlock
         code={`'use client'
  
@@ -147,7 +146,6 @@ export default function ClientForm({ action }) {
   )
 }`}
       />
-
       <CodeBlock
         code={`//actions.js
 'use server'
@@ -159,6 +157,76 @@ export async function createPost(formData: FormData) {
  
   // Mutate data
   // Revalidate cache
+}`}
+      />
+      <h2>examples</h2>
+      <h3>showing pending state</h3>
+      <p>
+        You can show a loading indicator using <b>useActionState</b>
+      </p>{" "}
+      that returns <b>boolean pending state</b>.
+      <CodeBlock
+        code={`'use client'
+ 
+import { useActionState, startTransition } from 'react'
+import { createPost } from '@/app/actions'
+import { LoadingSpinner } from '@/app/ui/loading-spinner'
+ 
+export function Button() {
+  const [state, action, pending] = useActionState(createPost, false)
+ 
+  return (
+    <button onClick={() => startTransition(action)}>
+      {pending ? <LoadingSpinner /> : 'Create Post'}
+    </button>
+  )
+}`}
+      />
+      <h3>refresh and revalidate data</h3>
+      <p>
+        After mutation data you can refresh data by calling <b>refresh</b> from
+        next/cache in a <b>server action</b>.
+      </p>
+      <CodeBlock
+        code={`'use server'
+ 
+import { auth } from '@/lib/auth'
+import { refresh } from 'next/cache'
+ 
+export async function updatePost(formData: FormData) {
+  const session = await auth()
+  if (!session?.user) {
+    throw new Error('Unauthorized')
+  }
+  // Mutate data
+  // ...
+ 
+  refresh()
+}`}
+      />
+      <p>
+        You can also revalidate data using <b>revalidatePath</b> or{" "}
+        <b>revalidateTag</b> in a <b>server component</b>. You can also redirect
+        the user using <b>redirect</b> method. Always put this method at the end
+        of your code.
+      </p>
+      <CodeBlock
+        code={`
+      'use server'
+import { auth } from '@/lib/auth'
+import { revalidatePath } from 'next/cache'
+import { redirect } from 'next/navigation'
+ 
+export async function createPost(formData: FormData) {
+  const session = await auth()
+  if (!session?.user) {
+    throw new Error('Unauthorized')
+  }
+  // Mutate data
+  // ...
+ 
+  revalidatePath('/posts')
+  redirect('/home')
 }`}
       />
     </div>
