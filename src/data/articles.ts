@@ -16,6 +16,7 @@ import ReduxToolkitEN from "../articles/ReduxToolkitEN";
 import ServerAndClientComponentsEN from "../articles/ServerAndClientComponentsEN";
 import FetchingInNextEN from "../articles/FetchingInNextEN";
 import ServerActionsEN from "../articles/ServerActionsEN";
+import ErrorsInNextEN from "../articles/ErrorsInNextEN";
 
 export type ArticlesMap = Record<string, FC>;
 // [key: string] = typ obiektu typu string / FC = component
@@ -39,4 +40,5 @@ export const articlesMap: ArticlesMap = {
   server_and_clients_components_EN: ServerAndClientComponentsEN,
   fetching_in_nextjs_EN: FetchingInNextEN,
   server_actions_nextjs_EN: ServerActionsEN,
+  errors_in_next_EN: ErrorsInNextEN,
 };
