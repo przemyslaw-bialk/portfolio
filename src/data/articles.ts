@@ -18,6 +18,7 @@ import FetchingInNextEN from "../articles/FetchingInNextEN";
 import ServerActionsEN from "../articles/ServerActionsEN";
 import ErrorsInNextEN from "../articles/ErrorsInNextEN";
 import RouteHandlersEN from "../articles/RouteHandlersEN";
+import ImageOptimizationEN from "../articles/ImageOptimizationEN";
 
 export type ArticlesMap = Record<string, FC>;
 // [key: string] = typ obiektu typu string / FC = component
@@ -43,4 +44,5 @@ export const articlesMap: ArticlesMap = {
   server_actions_nextjs_EN: ServerActionsEN,
   errors_in_next_EN: ErrorsInNextEN,
   route_handlers_EN: RouteHandlersEN,
+  image_optimization_EN: ImageOptimizationEN,
 };
