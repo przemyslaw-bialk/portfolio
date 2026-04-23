@@ -37,6 +37,7 @@ const Blog = () => {
           display: "flex",
           alignItems: "flex-start",
           justifyContent: "start",
+          
           gap: "20px",
         }}
       >
