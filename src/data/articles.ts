@@ -20,6 +20,7 @@ import ErrorsInNextEN from "../articles/ErrorsInNextEN";
 import RouteHandlersEN from "../articles/RouteHandlersEN";
 import ImageOptimizationEN from "../articles/ImageOptimizationEN";
 import UnionsAndNarrowingEN from "../articles/UnionsAndNarrowingEN";
+import ObjectsInTypeScriptsEN from "../articles/ObjectsInTypescriptEN";
 
 export type ArticlesMap = Record<string, FC>;
 // [key: string] = typ obiektu typu string / FC = component
@@ -47,4 +48,5 @@ export const articlesMap: ArticlesMap = {
   route_handlers_EN: RouteHandlersEN,
   image_optimization_EN: ImageOptimizationEN,
   unions_and_narrowing_EN: UnionsAndNarrowingEN,
+  objects_in_typescript_EN: ObjectsInTypeScriptsEN,
 };
