@@ -78,6 +78,86 @@ const user2: User = {
         declared as required and | undefined must exist, even if the value is
         undefined .
       </p>
+      <h2>Union Types with Objects</h2>
+      <p>
+        If you have two object types in a union, you can safely use only the
+        properties that exist in both types. If a property exists in only one of
+        them, you need to check it conditionally using type narrowing.{" "}
+        <b>
+          Note that TypeScript won’t allow truthiness existence checks like "if
+          (poem.pages)".
+        </b>
+      </p>
+      <CodeBlock
+        code={`type A = {
+  name: string;
+  pages: number;
+};
+
+type B = {
+  name: string;
+  rhymes: boolean;
+};
+
+type Poem = A | B;
+
+poem.name // OK
+
+poem.pages // Error
+
+// TRUTHINESS CHECK - NOT ALLOWED
+if (poem.pages) // ERROR
+
+// CONDITIONAL CHECK
+if ("pages" in poem) {
+  console.log(poem.pages); //OK
+}
+`}
+      />
+      <h2>Discriminated unions</h2>
+      <p>
+        Discriminated unions in TypeScript are union types where each object has
+        a common property (called a discriminant) with a different literal
+        value, allowing TypeScript to narrow the type automatically
+      </p>
+      <CodeBlock
+        code={`type RequestState =
+  | { status: "loading" }
+  | { status: "success"; data: string }
+  | { status: "error"; message: string };
+  
+  function handle(state: RequestState) {
+  if (state.status === "success") {
+    console.log(state.data); // OK
+  }
+
+  if (state.status === "error") {
+    console.log(state.message); // OK
+  }
+}
+  `}
+      />
+      <h2>Intersection Types</h2>
+      <p>
+        Intersection types in TypeScript combine multiple types into one using
+        &, meaning the value must satisfy all included types at the same time.
+      </p>
+      <CodeBlock
+        code={`type Name = {
+  name: string;
+};
+
+type Age = {
+  age: number;
+};
+
+type Person = Name & Age;
+
+const user: Person = {
+  name: "Tom",
+  age: 25,
+};`}
+      />
     </div>
   );
 };
