@@ -21,6 +21,7 @@ import RouteHandlersEN from "../articles/RouteHandlersEN";
 import ImageOptimizationEN from "../articles/ImageOptimizationEN";
 import UnionsAndNarrowingEN from "../articles/UnionsAndNarrowingEN";
 import ObjectsInTypeScriptsEN from "../articles/ObjectsInTypescriptEN";
+import FunctionsTypeScriptEN from "../articles/FunctionsTypeScriptEN";
 
 export type ArticlesMap = Record<string, FC>;
 // [key: string] = typ obiektu typu string / FC = component
@@ -49,4 +50,5 @@ export const articlesMap: ArticlesMap = {
   image_optimization_EN: ImageOptimizationEN,
   unions_and_narrowing_EN: UnionsAndNarrowingEN,
   objects_in_typescript_EN: ObjectsInTypeScriptsEN,
+  functions_in_typescript_EN: FunctionsTypeScriptEN,
 };
