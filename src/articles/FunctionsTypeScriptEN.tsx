@@ -125,6 +125,105 @@ function singSongs(songs: string[]) {
 
   songs.length ? singSongsRecursive(songs.slice(1), count + 1) : count;`}
       />
+      <h2>function types</h2>
+      <p>
+        Functions in javascript are <b>first-class functions</b> which basically
+        means they can be treated as normal variables. Function type syntax
+        looks similar to an arrow function, but with a type instead of the body.
+      </p>
+      <p>Function with no parameters that must return string as a value:</p>
+      <CodeBlock
+        code={`let nothingInGivesString: () => string;
+`}
+      />
+      <p>
+        This inputAndOutput variable’s type describes a function with a string[]
+        parameter, an optional count parameter, and a returned number value:
+      </p>
+      <CodeBlock
+        code={`let inputAndOutput: (songs: string[], count?: number) => number;
+`}
+      />
+      <p>
+        Function types are frequently used to describe callback parameters
+        (parameters meant to be called as functions).
+      </p>
+      <CodeBlock
+        code={`function calculate(a: number, b: number, callback: (result: number) => void) {
+  const sum = a + b;
+  callback(sum);
+}
+
+calculate(5, 3, (value) => {
+  console.log(value);
+});`}
+      />
+      <h3>Function Type Parentheses</h3>
+      <p>
+        Function types may be placed anywhere that another type would be used.
+        That includes union types.
+      </p>
+      <CodeBlock
+        code={`// Type is a function that returns a union: string | undefined
+let returnsStringOrUndefined: () => string | undefined;
+
+// Type is either undefined or a function that returns a string
+let maybeReturnsString: (() => string) | undefined;`}
+      />
+      <h3>Parameter Type Inferences</h3>
+      <p>
+        TypeScript can infer the types of parameters in a function provided to a
+        location with a declared type.
+      </p>
+      <CodeBlock
+        code={`const names = ["Tom", "Anna", "John"];
+
+names.forEach((name) => {
+  console.log(name.toUpperCase());
+});
+`}
+      />
+      <h3>Function Type Aliases</h3>
+      <p>
+        Function type aliases in TypeScript let you create a custom name for a
+        function type, making code cleaner and easier to reuse.
+      </p>
+      <CodeBlock
+        code={`type Greet = (name: string) => void;
+    const sayHi: Greet = (name) => {
+      console.log("hi" + name);    
+    }`}
+      />
+      <h3>Function Overloads</h3>
+      <p>
+        Function overloads in TypeScript allow a function to have multiple
+        possible type signatures depending on how it is called.
+      </p>
+      <CodeBlock
+        code={`function format(value: string): string;
+function format(value: number): string;
+
+function format(value: string | number): string {
+  return value.toString();
+}
+
+format("hello"); // OK
+format(123);     // OK`}
+      />
+      <h3>Call-Signature Compatibility</h3>
+      <p>
+        TypeScript checking whether one function can safely replace another
+        based on parameters and return type.
+      </p>
+      <CodeBlock
+        code={`type FnA = (a: number, b: number) => number;
+type FnB = (x: number, y: number) => number;
+
+let a: FnA;
+let b: FnB;
+
+a = b; // OK`}
+      />
     </div>
   );
 };
