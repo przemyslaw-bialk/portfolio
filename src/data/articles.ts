@@ -22,6 +22,7 @@ import ImageOptimizationEN from "../articles/ImageOptimizationEN";
 import UnionsAndNarrowingEN from "../articles/UnionsAndNarrowingEN";
 import ObjectsInTypeScriptsEN from "../articles/ObjectsInTypescriptEN";
 import FunctionsTypeScriptEN from "../articles/FunctionsTypeScriptEN";
+import ArraysInTypeScriptEN from "../articles/ArraysInTypeScriptEN";
 
 export type ArticlesMap = Record<string, FC>;
 // [key: string] = typ obiektu typu string / FC = component
@@ -51,4 +52,5 @@ export const articlesMap: ArticlesMap = {
   unions_and_narrowing_EN: UnionsAndNarrowingEN,
   objects_in_typescript_EN: ObjectsInTypeScriptsEN,
   functions_in_typescript_EN: FunctionsTypeScriptEN,
+  arrays_in_typescript_EN: ArraysInTypeScriptEN,
 };
