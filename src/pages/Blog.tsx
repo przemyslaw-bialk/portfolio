@@ -7,6 +7,7 @@ const categoryLabels: Record<string, string> = {
   javascript: "JavaScript",
   typescript: "TypeScript",
   next: "Next.js",
+  node: "Node.js",
   other: "Other",
 };
 

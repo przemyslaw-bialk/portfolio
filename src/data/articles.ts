@@ -33,10 +33,11 @@ import ParamsEn from "../articles/ParamsEN";
 import LoopsInJSPL from "../articles/LoopsInJSPL";
 import PersistReduxDataEN from "../articles/PersistReduxDataEn";
 import CustomHooksEn from "../articles/CustomHooksEN";
+import FileSystemEN from "../articles/FileSystemEN";
 
 export type Article = {
   component: FC;
-  category: "next" | "typescript" | "javascript" | "other";
+  category: "next" | "typescript" | "javascript" | "other" | "node";
 };
 
 export const articlesMap: Record<string, Article> = {
@@ -165,6 +166,13 @@ export const articlesMap: Record<string, Article> = {
   redux_with_typescript_EN: {
     component: ReduxWithTypescriptEN,
     category: "typescript",
+  },
+
+  // NODE
+
+  file_system_EN: {
+    component: FileSystemEN,
+    category: "node",
   },
 
   // Other
