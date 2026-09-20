@@ -34,6 +34,7 @@ import LoopsInJSPL from "../articles/LoopsInJSPL";
 import PersistReduxDataEN from "../articles/PersistReduxDataEn";
 import CustomHooksEn from "../articles/CustomHooksEN";
 import FileSystemEN from "../articles/FileSystemEN";
+import CryptoEN from "../articles/CryptoEN";
 
 export type Article = {
   component: FC;
@@ -172,6 +173,10 @@ export const articlesMap: Record<string, Article> = {
 
   file_system_EN: {
     component: FileSystemEN,
+    category: "node",
+  },
+  crypto_EN: {
+    component: CryptoEN,
     category: "node",
   },
 
